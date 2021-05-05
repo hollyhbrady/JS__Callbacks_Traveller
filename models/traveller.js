@@ -3,13 +3,15 @@ const Traveller = function(journeys) {
 };
 
 Traveller.prototype.getJourneyStartLocations = function() {
-  const result = this.journeys.map(journey => journey.startLocation)
-  return result;
+  return this.journeys.map(journey => {
+    return journey.startLocation;
+  });
 };
 
 Traveller.prototype.getJourneyEndLocations = function () {
-  const result = this.journeys.map(journey => journey.endLocation)
-  return result;
+  return this.journeys.map(journey => {
+    return journey.endLocation;
+  });
 };
 
 Traveller.prototype.getJourneysByTransport = function (transport) {
